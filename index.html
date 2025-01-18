@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aizan Zafar | Academic Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.2/css/academicons.min.css">
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .cover {
+            background-image: url('img/background_2.webp');
+            background-size: cover;
+            background-position: center;
+            height: 25vh;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            color: white;
+            position: relative;
+            padding-left: 10%;
+        }
+        .profile-container {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: -40px;
+            left: 10%;
+        }
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 4px solid white;
+        }
+        .profile-info {
+            margin-left: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .profile-name {
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+        }
+        .icons {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            gap: 10px;
+            margin-top: 5px;
+        }
+        .icons a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding-top: 80px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .edu-card, .project-card {
+            background: #f8f9fa;
+            border-left: 5px solid #007bff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+        .edu-logo, .project-logo {
+            height: 60px;
+            margin-right: 15px;
+        }
+        .highlight {
+            color: blue;
+            font-weight: bold;
+        }
+        /* .about-me {
+            background: #f9f9f9; 
+            border-left: 5px solid #007bff; 
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            line-height: 1.6;
+        } */
+
+        .about-me {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #333; /* Slightly darker text for better readability */
+            margin-top: 20px;
+        }
+    .about-me p {
+        margin-bottom: 12px;
+    }
+
+    .highlight {
+        font-weight: bold;
+        color: #000;
+    }
+
+    .highlight-link {
+        font-weight: bold;
+        color: #007bff; /* Make it more visible */
+        text-decoration: none;
+    }
+
+    .highlight-link:hover {
+        text-decoration: underline;
+    }
+    .fa-solid {
+        margin-right: 8px;
+    }
+
+</style>
+</head>
+<body>
+    <div class="cover">
+        <div class="profile-container">
+            <img src="img/aizan_pic.JPG" alt="Aizan Zafar" class="profile-img">
+            <div class="profile-info">
+                <div class="profile-name">Aizan Zafar</div>
+                <ul class="icons">
+                    <li><a href="https://github.com/aizanzafar" class="fa-brands fa-github"></a></li>
+                    <li><a href="https://www.linkedin.com/in/aizanzafar/" class="fa-brands fa-linkedin"></a></li>
+                    <li><a href="https://scholar.google.com/citations?user=iqYHEnsAAAAJ&amp;hl=en" class="ai ai-google-scholar"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="about-me">
+            <p>
+                <i class="fa-solid fa-rocket" style="color: #007bff;"></i> I am a 
+                <span class="highlight">Postdoctoral Researcher</span> at the 
+                <a href="https://www.crcv.ucf.edu/" target="_blank" class="highlight-link">Center for Research in Computer Vision (CRCV), UCF</a>. 
+                My research focuses on <span class="highlight">medical AI</span>, <span class="highlight">natural language processing (NLP)</span>, 
+                and <span class="highlight">multimodal learning</span>, aiming to improve 
+                <strong>medical question-answering and dialogue systems</strong>.
+            </p>
+            
+            <p>
+                <i class="fa-solid fa-magnifying-glass" style="color: #007bff;"></i> I have worked extensively on 
+                <span class="highlight">causal reasoning</span>, <span class="highlight">knowledge-infused AI models</span>, 
+                and <span class="highlight">medical image-text understanding</span>. 
+                My Ph.D. at <a href="https://www.iitp.ac.in/" target="_blank" class="highlight-link">Indian Institute of Technology Patna, India</a> 
+                focused on enhancing <strong>medical consultations</strong> using <span class="highlight">large language models (LLMs)</span> 
+                and <span class="highlight">knowledge graphs</span>. Additionally, I have contributed to projects such as 
+                <span class="highlight">Sevak</span> (a <strong>multilingual AI chatbot</strong>) and 
+                <span class="highlight">PERCURO</span> (a <strong>clinical text processing system</strong>).
+            </p>
+            
+            <p>
+                <i class="fa-solid fa-lightbulb" style="color: #007bff;"></i> I am passionate about <span class="highlight">interpretable AI</span> 
+                and advancing <span class="highlight">human-AI collaboration in healthcare</span>. 
+                My work has been published in <span class="highlight">top-tier AI conferences and journals</span>.
+            </p>
+        </div>
+                
+        <nav>
+            <ul>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section id="publications">
+            <h2>📚 Publications</h2>
+        
+            <!-- 2025 -->
+            <h3 style="margin-bottom: 10px;">2025</h3>
+            <div class="publication">
+                <h4 style="margin-left: 25px; color:#1a73e8; font-weight: bold; font-size: 18px;">MedEx: Enhancing Medical Question-Answering with First-Order Logic-based Reasoning and Knowledge Injection</h4>
+                <p style="margin-left: 25px;"><strong>Authors:</strong> Aizan Zafar, Kshitij Mishra, Asif Ekbal</p>
+                <p style="margin-left: 25px;"><strong>Conference:</strong> COLING 2025</p>
+                <p style="margin-left: 25px;">MedEx integrates First-Order Logic (FOL) reasoning with knowledge graphs to model symptom-disease-treatment relationships, enhancing answer accuracy in medical QA.</p>
+                <a href="#" class="fa-solid fa-file-alt" style="margin-left: 25px;">  [Paper]</a>
+            </div>
+        
+            <!-- 2024 -->
+            <h3 style="margin-bottom: 10px;">2024</h3>
+            <div class="publication">
+                <h4 style="margin-left: 25px; color: #1a73e8; font-weight: bold; font-size: 18px;">MedLogic-AQA: Enhancing Medical Question Answering with Abstractive Models Focusing on Logical Structures</h4>
+                <p style="margin-left: 25px;"><strong>Authors:</strong> Aizan Zafar, Kshitij Mishra, Asif Ekbal</p>
+                <p style="margin-left: 25px;"><strong>Conference:</strong> EMNLP 2024</p>
+                <p style="margin-left: 25px;">MedLogic-AQA leverages First-Order Logic rules and neural networks to improve reasoning in medical QA, achieving state-of-the-art performance.</p>
+                <a href="https://aclanthology.org/2024.findings-emnlp.981/" class="fa-solid fa-file-alt" style="margin-left: 25px;">  Paper</a>
+            </div>
+            
+            <div class="publication">
+                <h4 style="margin-left: 25px; color: #1a73e8; font-weight: bold; font-size: 18px;">KI-MAG: A Knowledge-Infused Abstractive Question Answering System in the Medical Domain</h4>
+                <p style="margin-left: 25px;"><strong>Authors:</strong> Aizan Zafar, Sovan Kumar Sahoo, Harsh Bhardawaj, Amitava Das, Asif Ekbal</p>
+                <p style="margin-left: 25px;"><strong>Journal:</strong> Neurocomputing (2024)</p>
+                <p style="margin-left: 25px;">KI-MAG enhances medical QA by integrating Knowledge Graphs (KGs) and synthetic data generation to improve model generalization. Compared to traditional QA models, our approach boosts BLEU scores by 15%, ensuring more accurate and context-aware medical responses.</p>
+                <a href="https://doi.org/10.1016/j.neucom.2023.127141" class="fa-solid fa-file-alt" style="margin-left: 25px;">  Paper</a>
+            </div>
+
+            <div class="publication">
+                <h4 style="margin-left: 25px; color: #1a73e8; font-weight: bold; font-size: 18px;">KIMedQA: Towards Building Knowledge-Enhanced Medical QA Models</h4>
+                <p style="margin-left: 25px;"><strong>Authors:</strong> Aizan Zafar, Sovan Kumar Sahoo, Deeksha Varshney, Amitava Das, Asif Ekbal</p>
+                <p style="margin-left: 25px;"><strong>Journal:</strong> Journal of Intelligent Information Systems (2024)</p>
+                <p style="margin-left: 25px;">KIMedQA enhances medical QA by refining Knowledge Graph selection and pruning, ensuring vector space consistency. The model outperforms ChatGPT on MASH-QA and COVID-QA, achieving higher F1 scores and human evaluation metrics.</p>
+                <a href="https://doi.org/10.1007/s10844-024-00844-1" class="fa-solid fa-file-alt" style="margin-left: 25px;">  Paper</a>
+            </div>
+
+            <div class="publication">
+                <h4 style="margin-left: 25px; color: #1a73e8; font-weight: bold; font-size: 18px;">Are My Answers Medically Accurate? Exploiting Medical Knowledge Graphs for Medical Question Answering</h4>
+                <p style="margin-left: 25px;"><strong>Authors:</strong> Aizan Zafar, Deeksha Varshney, Sovan Kumar Sahoo, Amitava Das, Asif Ekbal</p>
+                <p style="margin-left: 25px;"><strong>Journal:</strong> Applied Intelligence (2024)</p>
+                <p style="margin-left: 25px;">Our model employs Medical Entity Scoring (MES) and Context Relevance Scoring (CRS) to rank medical entities from knowledge graphs like UMLS and PharmKG, achieving state-of-the-art results on MASH-QA and COVID-QA</p>
+                <a href="https://doi.org/10.1007/s10844-024-00844-1" class="fa-solid fa-file-alt" style="margin-left: 25px;">  Paper</a>
+            </div>
+
+            
+            <!-- 2023 -->
+            <h3 style="margin-bottom: 10px;">2023</h3>
+            <div class="publication">
+                <h4 style="margin-left: 25px;color: #1a73e8; font-weight: bold; font-size: 18px;">End-to-End Sign Language Translation via Multitask Learning</h4>
+                <p style="margin-left: 25px;"><strong>Authors:</strong> Dibyanayan Bandyopadhyay, Aizan Zafar, Asif Ekbal, Mohammed Hasanuzzaman</p>
+                <p style="margin-left: 25px;"><strong>Conference:</strong> IJCNN 2023</p>
+                <p style="margin-left: 25px;">A transformer-based model for simultaneous Continuous Sign Language Recognition (CSLR) and text translation, significantly improving translation accuracy.</p>
+                <a href="https://doi.org/10.1109/IJCNN54540.2023.10191295" class="fa-solid fa-file-alt" style="margin-left: 25px;">  Paper</a>
+            </div>
+
+            
+            <div class="publication">
+                <h4 style="margin-left: 25px;color: #1a73e8; font-weight: bold; font-size: 18px;">Knowledge Graph Assisted End-to-End Medical Dialog Generation</h4>
+                <p style="margin-left: 25px;"><strong>Authors:</strong> Deeksha Varshney, Aizan Zafar, Niranshu Kumar Behera, Asif Ekbal</p>
+                <p style="margin-left: 25px;"><strong>Journal:</strong> Artificial Intelligence in Medicine (2023)</p>
+                <p style="margin-left: 25px;">This research integrates medical knowledge graphs (UMLS) with pre-trained transformers, significantly improving medical chatbot accuracy and coherence in clinical settings.</p>
+                <a href="https://doi.org/10.1016/j.artmed.2023.102535" class="fa-solid fa-file-alt" style="margin-left: 25px;">  Paper</a>
+            </div>
+            
+            <div class="publication">
+                <h4 style="margin-left: 25px;color: #1a73e8; font-weight: bold; font-size: 18px;">Knowledge Grounded Medical Dialogue Generation Using Augmented Graphs</h4>
+                <p style="margin-left: 25px;"><strong>Authors:</strong> Deeksha Varshney, Aizan Zafar, Niranshu Kumar Behera, Asif Ekbal</p>
+                <p style="margin-left: 25px;"><strong>Journal:</strong> Scientific Reports, Nature (2023)</p>
+                <p style="margin-left: 25px;">Propose a Masked Entity Dialogue (MED) model that augments knowledge graphs and leverages conversational history for context-aware medical chatbot responses.</p>
+                <a href="https://doi.org/10.1038/s41598-023-29213-8" class="fa-solid fa-file-alt" style="margin-left: 25px;">  Paper</a>
+            </div>
+
+            <!-- 2022 -->
+            <h3 style="margin-bottom: 10px;">2022</h3>
+            <div class="publication">
+                <h4 style="margin-left: 25px; color: #1a73e8; font-weight: bold; font-size: 18px;">CDialog: A Multi-Turn COVID-19 Conversation Dataset for Entity-Aware Dialog Generation</h4>
+                <p style="margin-left: 25px;"><strong>Authors:</strong> Deeksha Varshney, Aizan Zafar, Niranshu Kumar Behra, Asif Ekbal</p>
+                <p style="margin-left: 25px;"><strong>Conference:</strong> EMNLP 2022</p>
+                <p style="margin-left: 25px;">Introduces CDialog, a multi-turn medical dialogue dataset with annotated medical entities, improving chatbot responses in COVID-related patient interactions.</p>
+                <a href="https://aclanthology.org/2022.emnlp-main.782.pdf" class="fa-solid fa-file-alt" style="margin-left: 25px;">  Paper</a>
+            </div>
+        
+            <!-- 2019 -->
+            <h3 style="margin-bottom: 10px;">2019</h3>
+            <div class="publication">
+                <h4 style="margin-left: 25px; color: #1a73e8; font-weight: bold; font-size: 18px;">Novel Initialization Strategy for K-Modes Clustering Algorithm</h4>
+                <p style="margin-left: 25px;"><strong>Authors:</strong> Aizan Zafar, K Swarupa Rani</p>
+                <p style="margin-left: 25px;"><strong>Conference:</strong> BigDML 2019</p>
+                <p style="margin-left: 25px;">Proposes a density-based initialization method for K-modes clustering, enhancing clustering accuracy for categorical datasets.</p>
+                <a href="https://link.springer.com/chapter/10.1007/978-981-33-4788-5_8" class="fa-solid fa-file-alt" style="margin-left: 25px;">  paper</a>
+            </div>
+        
+        </section>
+                
+                
+        <section id="projects">
+            <h2>Projects</h2>
+            
+            <div class="project-card">
+                <img src="img/sevak_logo.jpg" alt="Sevak Logo" class="project-logo">
+                <div>
+                    <h3>Sevak - An Intelligent Indian Language Chatbot</h3>
+                    <p><em>Multilingual chatbot supporting Hindi, Bengali, Telugu, and English with domain expertise in Railways, Judiciary, and Healthcare.</em></p>
+                    <ul>
+                        <li>Implemented a multilingual chatbot supporting native & Roman scripts, focusing on low-resource languages.</li>
+                        <li>Integrated domain-specific knowledge for Railways, Judiciary, and Healthcare.</li>
+                        <li>Worked extensively on code-mixing to improve linguistic diversity preservation and chatbot versatility.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <img src="img/percuro_logo.jpg" alt="PERCURO Logo" class="project-logo">
+                <div>
+                    <h3>PERCURO - Holistic Clinical Text Solution</h3>
+                    <p><em>Comprehensive AI-driven Question Answering system for clinical text, integrating knowledge graphs.</em></p>
+                    <ul>
+                        <li>Developed a QA system tailored for clinical text, improving accuracy & relevance.</li>
+                        <li>Integrated LLM-based models such as BERT, BioBERT, ClinicalBERT, BioLinkBERT.</li>
+                        <li>Utilized conversational data to enhance the knowledge graph, improving system capabilities.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="education">
+            <h2>Education</h2>
+            <div class="edu-card">
+                <img src="img/iit_patna_logo.png" alt="IIT Patna Logo" class="edu-logo">
+                <div>
+                    <h3>Ph.D. in Computer Science and Engineering</h3>
+                    <p><strong>Indian Institute of Technology Patna, India</strong> (2019 – 2024)</p>
+                </div>
+            </div>
+            <div class="edu-card">
+                <img src="img/UoH_logo.jpg" alt="University of Hyderabad Logo" class="edu-logo">
+                <div>
+                    <h3>M.Tech. in Information Technology</h3>
+                    <p><strong>University of Hyderabad, Telangana, India</strong> (2017 – 2019)</p>
+                </div>
+            </div>
+            <div class="edu-card">
+                <img src="img/ggu_logo.png" alt="Guru Ghasidas University Logo" class="edu-logo">
+                <div>
+                    <h3>B.Tech. in Information Technology</h3>
+                    <p><strong>Guru Ghasidas Central University, Chhattisgarh, India</strong> (2012 – 2016)</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>📬 Contact</h2>
+            <p><strong>Email:</strong> <a href="mailto:aizanzafar@gmail.com" style="color: #007bff; font-weight: bold;">aizanzafar@gmail.com</a></p>
+        </section>
+        
+    </div>
+</body>
+</html>
