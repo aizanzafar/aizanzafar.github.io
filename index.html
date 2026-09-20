@@ -295,7 +295,7 @@
       gap: 28px;
       align-items: stretch;
     }
-    .about-card, .research-card, .pub-card, .edu-card, .contact-card {
+    .about-card, .research-card, .project-card, .pub-card, .edu-card, .contact-card {
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: white;
@@ -401,6 +401,67 @@
       background: #eef4fa;
       border-radius: 999px;
       padding: 6px 9px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .project-card {
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+    .project-card-top {
+      min-height: 116px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background: linear-gradient(135deg, #0a1830, #103c62);
+      color: white;
+    }
+    .project-card-top.alt { background: linear-gradient(135deg, #0a2a28, #0f766e); }
+    .project-card-top.warm { background: linear-gradient(135deg, #31200b, #8a5a13); }
+    .project-card-top.violet { background: linear-gradient(135deg, #221642, #5b3fa3); }
+    .project-logo {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      border-radius: 14px;
+      background: white;
+      padding: 7px;
+      border: 1px solid rgba(255,255,255,.25);
+      flex: 0 0 auto;
+    }
+    .project-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      font-size: 1.35rem;
+      flex: 0 0 auto;
+    }
+    .project-card-top h3 { margin: 0 0 4px; font-size: 1.18rem; }
+    .project-subtitle { margin: 0; color: #d6e6f6; font-size: .88rem; font-weight: 600; }
+    .project-body { padding: 24px; display: flex; flex-direction: column; flex: 1; }
+    .project-body p { margin: 0 0 14px; color: var(--muted); }
+    .project-points { margin: 0 0 18px; padding-left: 19px; color: #4c5d72; font-size: .93rem; }
+    .project-points li { margin: 7px 0; }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto; }
+    .project-tags span {
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: #eef4fa;
+      color: #315173;
+      font-size: .75rem;
+      font-weight: 800;
     }
 
     .featured-pubs {
@@ -536,7 +597,7 @@
       .hero-inner { gap: 48px; }
       .portrait-wrap { justify-content: flex-start; }
       .portrait-badge { right: auto; left: 260px; }
-      .research-grid, .featured-pubs { grid-template-columns: 1fr; }
+      .research-grid, .project-grid, .featured-pubs { grid-template-columns: 1fr; }
       .education-grid { grid-template-columns: 1fr; }
       .section-heading { gap: 14px; }
     }
@@ -602,6 +663,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -620,6 +682,7 @@
         </p>
         <div class="hero-actions">
           <a class="button button-primary" href="#research"><i class="fa-solid fa-flask"></i> Explore my research</a>
+          <a class="button button-ghost" href="img/Aizan_Zafar_CV.pdf" download="Aizan_Zafar_CV.pdf"><i class="fa-solid fa-file-arrow-down"></i> Download CV</a>
           <a class="button button-ghost" href="https://scholar.google.com/citations?user=iqYHEnsAAAAJ&hl=en" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Google Scholar</a>
         </div>
         <div class="socials" aria-label="Social profiles">
@@ -757,7 +820,97 @@
       </div>
     </section>
 
-    <section class="section section-soft" id="publications">
+    <section class="section section-soft" id="projects">
+      <div class="content">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Projects &amp; systems</p>
+            <h2>Research ideas translated into working AI systems.</h2>
+          </div>
+          <p class="section-intro">Selected projects spanning industrial software engineering, agentic AI, multilingual conversational systems, and knowledge-grounded clinical question answering.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-card-top">
+              <div class="project-icon"><i class="fa-solid fa-gears"></i></div>
+              <div>
+                <h3>Industrial AI for PLC / SCL Engineering</h3>
+                <p class="project-subtitle">IIIT Bangalore × Siemens · 2025–2026</p>
+              </div>
+            </div>
+            <div class="project-body">
+              <p>Knowledge-guided AI for industrial automation software, connecting program structure, engineering metadata, and foundation-model reasoning.</p>
+              <ul class="project-points">
+                <li>Modeled PLC/SCL programs and structured engineering knowledge for downstream AI tasks.</li>
+                <li>Explored test generation, anomaly-oriented reasoning, requirements traceability, and HMI metadata mapping.</li>
+                <li>Investigated neural-symbolic and knowledge-graph representations for more grounded industrial AI.</li>
+              </ul>
+              <div class="project-tags"><span>Industrial AI</span><span>PLC / SCL</span><span>Knowledge Graphs</span><span>Neuro-symbolic AI</span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card-top alt">
+              <div class="project-icon"><i class="fa-solid fa-code-branch"></i></div>
+              <div>
+                <h3>Efficient Agentic Coding Systems</h3>
+                <p class="project-subtitle">Siemens research collaboration</p>
+              </div>
+            </div>
+            <div class="project-body">
+              <p>Evaluation and optimization of LLM coding agents, with emphasis on using context more efficiently without sacrificing software-engineering task quality.</p>
+              <ul class="project-points">
+                <li>Benchmarked multiple coding-agent strategies on realistic repository-level tasks.</li>
+                <li>Studied context trimming, behavioral optimization, token efficiency, and quality–cost trade-offs.</li>
+                <li>Analyzed when compression and context-management techniques help—or hurt—agent performance.</li>
+              </ul>
+              <div class="project-tags"><span>Agentic AI</span><span>LLM Systems</span><span>Software Engineering</span><span>Efficient Context</span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card-top warm">
+              <img src="img/sevak_logo.jpg" alt="Sevak project logo" class="project-logo" />
+              <div>
+                <h3>Sevak — Intelligent Indian Language Chatbot</h3>
+                <p class="project-subtitle">Multilingual conversational AI</p>
+              </div>
+            </div>
+            <div class="project-body">
+              <p>A multilingual conversational system designed for Indian-language and domain-specific interactions across native and Roman scripts.</p>
+              <ul class="project-points">
+                <li>Supported Hindi, Bengali, Telugu, and English, including low-resource and code-mixed settings.</li>
+                <li>Integrated domain knowledge for Railways, Judiciary, and Healthcare.</li>
+                <li>Focused on preserving linguistic diversity while improving practical chatbot usability.</li>
+              </ul>
+              <div class="project-tags"><span>NLP</span><span>Multilingual AI</span><span>Dialogue</span><span>Code Mixing</span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card-top violet">
+              <img src="img/percuro_logo.jpg" alt="PERCURO project logo" class="project-logo" />
+              <div>
+                <h3>PERCURO — Holistic Clinical Text Solution</h3>
+                <p class="project-subtitle">Knowledge-grounded medical question answering</p>
+              </div>
+            </div>
+            <div class="project-body">
+              <p>An AI-driven clinical question-answering system combining biomedical language models with structured domain knowledge.</p>
+              <ul class="project-points">
+                <li>Developed clinical QA components using biomedical and clinical transformer models.</li>
+                <li>Integrated medical knowledge graphs to improve answer grounding and relevance.</li>
+                <li>Used conversational information to enrich the knowledge representation supporting the QA pipeline.</li>
+              </ul>
+              <div class="project-tags"><span>Medical AI</span><span>Question Answering</span><span>Knowledge Graphs</span><span>Clinical NLP</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="publications">
       <div class="content">
         <div class="section-heading">
           <div>
