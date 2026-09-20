@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aizan Zafar — AI researcher working on multimodal AI, trustworthy AI, medical AI, LLMs, agentic systems, and industrial AI." />
+  <meta name="author" content="Aizan Zafar" />
+  <meta property="og:title" content="Aizan Zafar | AI Researcher" />
+  <meta property="og:description" content="Research portfolio of Aizan Zafar: multimodal AI, trustworthy AI, medical AI, LLMs, agentic systems, and industrial AI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aizanzafar.github.io/" />
+  <meta property="og:image" content="img/profile_pic.jpeg" />
+  <title>Aizan Zafar | AI Researcher</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" />
+
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-2: #0a1628;
+      --surface: #ffffff;
+      --surface-soft: #f5f8fc;
+      --ink: #122033;
+      --muted: #607086;
+      --line: #dfe7f0;
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --accent: #06b6d4;
+      --green: #0f9f6e;
+      --warm: #b7791f;
+      --shadow: 0 20px 60px rgba(15, 38, 71, 0.12);
+      --radius: 22px;
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--surface);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    img { max-width: 100%; }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      background: white;
+      color: black;
+      padding: .75rem 1rem;
+      z-index: 999;
+    }
+    .skip-link:focus { left: 1rem; top: 1rem; }
+
+    .nav-wrap {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 100;
+      background: rgba(7, 17, 31, 0.82);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav {
+      width: min(var(--max), calc(100% - 36px));
+      margin: auto;
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand {
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+      color: white;
+      text-decoration: none;
+      letter-spacing: -.02em;
+      font-size: 1.1rem;
+    }
+    .brand span { color: #67e8f9; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      color: #d6e2f2;
+      text-decoration: none;
+      padding: 9px 11px;
+      border-radius: 10px;
+      font-size: .92rem;
+      font-weight: 600;
+    }
+    .nav-links a:hover { background: rgba(255,255,255,.08); color: white; }
+    .menu-button {
+      display: none;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.05);
+      color: white;
+      border-radius: 10px;
+      padding: 8px 11px;
+      font-size: 1.05rem;
+    }
+
+    .hero {
+      min-height: 720px;
+      padding: 150px 0 90px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 82% 10%, rgba(6,182,212,.25), transparent 32%),
+        radial-gradient(circle at 8% 62%, rgba(37,99,235,.28), transparent 31%),
+        linear-gradient(135deg, #06101e 0%, #0a1830 50%, #07111f 100%);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .12;
+      background-image: linear-gradient(rgba(255,255,255,.14) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.14) 1px, transparent 1px);
+      background-size: 46px 46px;
+      mask-image: linear-gradient(to bottom, black, transparent 92%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      width: min(var(--max), calc(100% - 36px));
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.5fr .8fr;
+      gap: 70px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px 12px;
+      border: 1px solid rgba(103,232,249,.32);
+      background: rgba(6,182,212,.09);
+      color: #a5f3fc;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: .11em;
+      font-size: .75rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 0 5px rgba(34,197,94,.12);
+    }
+    h1, h2, h3 { font-family: "Manrope", sans-serif; line-height: 1.18; }
+    h1 {
+      font-size: clamp(3rem, 7vw, 5.8rem);
+      line-height: .98;
+      letter-spacing: -.055em;
+      margin: 0 0 20px;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #93c5fd 0%, #67e8f9 52%, #a7f3d0 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero-title {
+      color: #d7e4f3;
+      font-size: clamp(1.14rem, 2vw, 1.4rem);
+      font-weight: 600;
+      margin: 0 0 18px;
+    }
+    .hero-copy {
+      color: #aebed2;
+      max-width: 760px;
+      font-size: 1.06rem;
+      margin: 0 0 30px;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 12px;
+      padding: 12px 16px;
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { background: #eaf6ff; color: #0c315d; }
+    .button-primary:hover { background: white; }
+    .button-ghost { border: 1px solid rgba(255,255,255,.18); color: #dce8f7; background: rgba(255,255,255,.04); }
+    .button-ghost:hover { border-color: rgba(255,255,255,.38); background: rgba(255,255,255,.08); }
+    .socials { display: flex; flex-wrap: wrap; gap: 10px; }
+    .socials a {
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+      display: grid;
+      place-items: center;
+      color: #d8e6f7;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+      text-decoration: none;
+      font-size: 1.15rem;
+    }
+    .socials a:hover { background: rgba(255,255,255,.10); color: white; }
+
+    .portrait-wrap { display: flex; justify-content: center; position: relative; }
+    .portrait-card {
+      width: min(340px, 86vw);
+      aspect-ratio: 1 / 1.12;
+      border-radius: 34px;
+      padding: 13px;
+      background: linear-gradient(145deg, rgba(255,255,255,.18), rgba(255,255,255,.04));
+      border: 1px solid rgba(255,255,255,.16);
+      box-shadow: 0 40px 100px rgba(0,0,0,.36);
+      transform: rotate(2deg);
+    }
+    .portrait-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 24px;
+      display: block;
+    }
+    .portrait-badge {
+      position: absolute;
+      right: 0;
+      bottom: 28px;
+      padding: 11px 14px;
+      border-radius: 13px;
+      color: #0f2d3d;
+      background: rgba(236,254,255,.94);
+      box-shadow: var(--shadow);
+      font-weight: 800;
+      font-size: .88rem;
+    }
+
+    main { background: white; }
+    section { scroll-margin-top: 90px; }
+    .section {
+      padding: 92px 0;
+    }
+    .section-soft { background: var(--surface-soft); }
+    .section-dark { background: var(--bg-2); color: white; }
+    .content {
+      width: min(var(--max), calc(100% - 36px));
+      margin: auto;
+    }
+    .section-heading {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: end;
+      gap: 36px;
+      margin-bottom: 42px;
+    }
+    .kicker {
+      margin: 0 0 8px;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .76rem;
+      font-weight: 800;
+    }
+    .section-dark .kicker { color: #67e8f9; }
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: -.035em;
+      margin: 0;
+    }
+    .section-intro { margin: 0; color: var(--muted); max-width: 650px; }
+    .section-dark .section-intro { color: #aebed2; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+    .about-card, .research-card, .pub-card, .edu-card, .contact-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: white;
+      box-shadow: 0 12px 35px rgba(25, 51, 83, .06);
+    }
+    .about-card { padding: 30px; }
+    .about-card p { margin: 0 0 14px; color: #415268; }
+    .about-card p:last-child { margin-bottom: 0; }
+    .focus-card {
+      border-radius: var(--radius);
+      padding: 30px;
+      color: white;
+      background: linear-gradient(145deg, #0b2240, #0a5a78);
+      box-shadow: var(--shadow);
+    }
+    .focus-card h3 { margin: 0 0 18px; font-size: 1.25rem; }
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: 9px; }
+    .tag {
+      display: inline-flex;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.15);
+      background: rgba(255,255,255,.08);
+      color: #e8f6ff;
+      font-size: .82rem;
+      font-weight: 650;
+    }
+
+    .timeline { position: relative; margin-top: 8px; }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 13px;
+      top: 6px;
+      bottom: 16px;
+      width: 2px;
+      background: #d5dfeb;
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 52px;
+      margin-bottom: 34px;
+    }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-dot {
+      position: absolute;
+      left: 4px;
+      top: 6px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: white;
+      border: 5px solid var(--primary);
+      box-shadow: 0 0 0 5px #e9f0fb;
+    }
+    .timeline-meta { color: var(--primary); font-weight: 800; font-size: .83rem; text-transform: uppercase; letter-spacing: .07em; }
+    .timeline-item h3 { margin: 4px 0 4px; font-size: 1.3rem; }
+    .timeline-org { margin: 0 0 8px; font-weight: 700; color: #43536a; }
+    .timeline-copy { margin: 0; color: var(--muted); max-width: 900px; }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .research-card {
+      padding: 26px;
+      position: relative;
+      overflow: hidden;
+      min-height: 255px;
+      display: flex;
+      flex-direction: column;
+    }
+    .research-card::after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: #eaf2ff;
+      top: -78px;
+      right: -65px;
+    }
+    .research-icon {
+      width: 47px;
+      height: 47px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: #eaf2ff;
+      color: var(--primary);
+      font-size: 1.1rem;
+      margin-bottom: 18px;
+    }
+    .research-card h3 { margin: 0 0 9px; font-size: 1.22rem; }
+    .research-card p { margin: 0 0 16px; color: var(--muted); }
+    .research-label {
+      margin-top: auto;
+      align-self: flex-start;
+      font-size: .78rem;
+      font-weight: 800;
+      color: #315173;
+      background: #eef4fa;
+      border-radius: 999px;
+      padding: 6px 9px;
+    }
+
+    .featured-pubs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+    .pub-card { padding: 24px; }
+    .pub-top { display: flex; align-items: center; gap: 9px; margin-bottom: 12px; flex-wrap: wrap; }
+    .venue {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: .75rem;
+      font-weight: 800;
+      background: #eaf2ff;
+      color: #174ea6;
+    }
+    .status {
+      font-size: .74rem;
+      font-weight: 800;
+      color: var(--green);
+      background: #e9fbf4;
+      border-radius: 999px;
+      padding: 5px 9px;
+    }
+    .status.review { color: #8a5a00; background: #fff6dd; }
+    .pub-card h3 { font-size: 1.13rem; margin: 0 0 9px; }
+    .authors { color: var(--muted); font-size: .91rem; margin: 0 0 13px; }
+    .authors strong { color: var(--ink); }
+    .pub-desc { color: #53647a; font-size: .93rem; margin: 0 0 15px; }
+    .pub-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .pub-links a {
+      color: var(--primary-dark);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: .88rem;
+    }
+    .pub-links a:hover { text-decoration: underline; }
+
+    .all-pubs {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: white;
+    }
+    .pub-row {
+      display: grid;
+      grid-template-columns: 76px 1fr auto;
+      gap: 18px;
+      align-items: start;
+      padding: 18px 22px;
+      border-top: 1px solid var(--line);
+    }
+    .pub-row:first-child { border-top: 0; }
+    .pub-year { font-family: "Manrope", sans-serif; font-weight: 800; color: var(--primary); }
+    .pub-row h3 { font-size: 1rem; margin: 0 0 4px; }
+    .pub-row p { margin: 0; color: var(--muted); font-size: .88rem; }
+    .pub-row a {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: .85rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .pub-row a:hover { text-decoration: underline; }
+
+    .education-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .edu-card { padding: 23px; }
+    .edu-logo {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 13px;
+      padding: 6px;
+      background: #fff;
+      border: 1px solid var(--line);
+      margin-bottom: 16px;
+    }
+    .edu-card h3 { margin: 0 0 7px; font-size: 1.1rem; }
+    .edu-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+    .contact-panel {
+      padding: 34px;
+      border-radius: var(--radius);
+      background: linear-gradient(145deg, #0b1b31, #0e3154);
+      color: white;
+      box-shadow: var(--shadow);
+    }
+    .contact-panel h2 { margin: 0 0 12px; font-size: clamp(2rem, 4vw, 3.1rem); }
+    .contact-panel p { margin: 0 0 22px; color: #bfd0e4; max-width: 650px; }
+    .contact-panel .button-primary { color: #0b3152; }
+    .contact-card { padding: 28px; display: flex; flex-direction: column; justify-content: center; }
+    .contact-card h3 { margin: 0 0 14px; }
+    .contact-list { display: grid; gap: 12px; }
+    .contact-list a {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      text-decoration: none;
+      color: #405168;
+      font-weight: 700;
+    }
+    .contact-list i { color: var(--primary); width: 18px; }
+
+    footer {
+      background: #07111f;
+      color: #91a4bc;
+      padding: 28px 0;
+      font-size: .88rem;
+    }
+    .footer-inner {
+      width: min(var(--max), calc(100% - 36px));
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+    footer a { color: #bcd5ee; text-decoration: none; }
+
+    @media (max-width: 900px) {
+      .hero { min-height: auto; }
+      .hero-inner, .about-grid, .section-heading, .contact-wrap { grid-template-columns: 1fr; }
+      .hero-inner { gap: 48px; }
+      .portrait-wrap { justify-content: flex-start; }
+      .portrait-badge { right: auto; left: 260px; }
+      .research-grid, .featured-pubs { grid-template-columns: 1fr; }
+      .education-grid { grid-template-columns: 1fr; }
+      .section-heading { gap: 14px; }
+    }
+
+    @media (max-width: 720px) {
+      .menu-button { display: inline-block; }
+      .nav { min-height: 64px; }
+      .nav-links {
+        position: absolute;
+        top: 64px;
+        left: 18px;
+        right: 18px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        background: #0c1a2b;
+        border: 1px solid rgba(255,255,255,.1);
+        border-radius: 14px;
+        padding: 8px;
+        box-shadow: 0 20px 50px rgba(0,0,0,.30);
+      }
+      .nav-links.open { display: flex; }
+      .hero { padding-top: 120px; }
+      h1 { font-size: clamp(3rem, 15vw, 4.5rem); }
+      .portrait-card { width: min(300px, 84vw); }
+      .portrait-badge { left: 205px; bottom: 20px; }
+      .section { padding: 70px 0; }
+      .pub-row { grid-template-columns: 52px 1fr; }
+      .pub-row > a { grid-column: 2; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aizan Zafar",
+    "url": "https://aizanzafar.github.io/",
+    "image": "https://aizanzafar.github.io/img/profile_pic.jpeg",
+    "jobTitle": "AI Researcher",
+    "sameAs": [
+      "https://github.com/aizanzafar",
+      "https://www.linkedin.com/in/aizanzafar/",
+      "https://scholar.google.com/citations?user=iqYHEnsAAAAJ&hl=en"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#top">Aizan <span>Zafar</span></a>
+      <button class="menu-button" aria-label="Toggle navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow"><span class="pulse"></span> AI Researcher · Multimodal & Trustworthy AI</div>
+        <h1>Aizan <span class="gradient-text">Zafar</span></h1>
+        <p class="hero-title">LLMs · Agentic AI · Multimodal Reasoning · Medical AI · Industrial AI</p>
+        <p class="hero-copy">
+          I build intelligent systems that combine foundation models, structured knowledge, reasoning, and multimodal learning. My work spans trustworthy AI for high-stakes settings, medical question answering and vision-language reasoning, and industrial AI systems for software and automation workflows.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#research"><i class="fa-solid fa-flask"></i> Explore my research</a>
+          <a class="button button-ghost" href="https://scholar.google.com/citations?user=iqYHEnsAAAAJ&hl=en" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Google Scholar</a>
+        </div>
+        <div class="socials" aria-label="Social profiles">
+          <a href="https://github.com/aizanzafar" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/aizanzafar/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://scholar.google.com/citations?user=iqYHEnsAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+          <a href="mailto:aizanzafar@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="portrait-wrap">
+        <div class="portrait-card">
+          <img src="img/profile_pic.jpeg" alt="Portrait of Aizan Zafar" />
+        </div>
+        <div class="portrait-badge"><i class="fa-solid fa-sparkles"></i>&nbsp; Open to research opportunities</div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <section class="section" id="about">
+      <div class="content">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">About</p>
+            <h2>Research across language, vision, reasoning, and real-world AI systems.</h2>
+          </div>
+          <p class="section-intro">My trajectory connects foundational NLP research with multimodal AI and production-facing industrial research, with a consistent emphasis on knowledge grounding, reasoning, reliability, and human-AI collaboration.</p>
+        </div>
+
+        <div class="about-grid">
+          <article class="about-card">
+            <p>I completed my Ph.D. in Computer Science and Engineering at <strong>IIT Patna</strong>, where my thesis focused on enhancing medical consultations through knowledge-grounded question answering and dialogue generation.</p>
+            <p>I later joined the <strong>Center for Research in Computer Vision (CRCV), University of Central Florida</strong> as a Postdoctoral Scholar, working on multimodal medical AI, medical visual question answering, causal reasoning, and vision-language systems.</p>
+            <p>Most recently, at <strong>IIIT Bangalore in collaboration with Siemens</strong>, I worked on industrial AI, including PLC/SCL program modeling, knowledge-guided automation, agentic coding systems, and efficient LLM context/token usage for real software-engineering workflows.</p>
+          </article>
+
+          <aside class="focus-card">
+            <h3>Research interests</h3>
+            <div class="tag-cloud">
+              <span class="tag">Large Language Models</span>
+              <span class="tag">Agentic AI</span>
+              <span class="tag">Multimodal AI</span>
+              <span class="tag">Vision-Language Models</span>
+              <span class="tag">Trustworthy AI</span>
+              <span class="tag">Medical AI</span>
+              <span class="tag">Knowledge Graphs</span>
+              <span class="tag">Neuro-symbolic AI</span>
+              <span class="tag">Causal Reasoning</span>
+              <span class="tag">Industrial AI</span>
+              <span class="tag">LLM Evaluation</span>
+              <span class="tag">Efficient Inference</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="experience">
+      <div class="content">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Experience</p>
+            <h2>From medical AI research to industrial foundation-model systems.</h2>
+          </div>
+          <p class="section-intro">Research experience across academia and industry collaboration, spanning language models, multimodal reasoning, knowledge-enhanced AI, and LLM systems engineering.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-meta">Aug 2025 – Aug 2026</div>
+            <h3>Postdoctoral Researcher</h3>
+            <p class="timeline-org">IIIT Bangalore · Siemens collaboration</p>
+            <p class="timeline-copy">Industrial AI research for automation and software-engineering workflows: PLC/SCL code modeling, knowledge-guided test generation and requirements traceability, anomaly-focused reasoning, agentic coding evaluation, and LLM context/token optimization.</p>
+          </article>
+
+          <article class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-meta">Oct 2024 – Aug 2025</div>
+            <h3>Postdoctoral Scholar</h3>
+            <p class="timeline-org">Center for Research in Computer Vision (CRCV), University of Central Florida</p>
+            <p class="timeline-copy">Worked on multimodal medical AI and geolocation-aware vision-language systems, including causal reasoning, medical VQA, multimodal foundation models, and image-to-language understanding.</p>
+          </article>
+
+          <article class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-meta">2019 – 2025</div>
+            <h3>Ph.D. Researcher · Computer Science & Engineering</h3>
+            <p class="timeline-org">Indian Institute of Technology Patna</p>
+            <p class="timeline-copy">Developed knowledge-grounded medical question answering and dialogue systems using knowledge graphs, first-order logic, neural language models, and structured reasoning.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="research">
+      <div class="content">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Featured research</p>
+            <h2>Problems I am currently excited about.</h2>
+          </div>
+          <p class="section-intro">These themes capture the strongest continuity in my recent work: making foundation models more capable, more interpretable, and more reliable in domains where errors matter.</p>
+        </div>
+
+        <div class="research-grid">
+          <article class="research-card">
+            <div class="research-icon"><i class="fa-solid fa-industry"></i></div>
+            <h3>Industrial AI & Agentic Coding Systems</h3>
+            <p>LLM- and knowledge-driven approaches for industrial automation software, including PLC/SCL modeling, test generation, requirements traceability, anomaly reasoning, and systematic evaluation of coding agents and context-management strategies.</p>
+            <span class="research-label">IIIT-B · Siemens</span>
+          </article>
+
+          <article class="research-card">
+            <div class="research-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Trustworthy Foundation Models</h3>
+            <p>Benchmarking and evaluating trustfulness, fairness, robustness, safety, calibration, and context integrity in modern language models, with an emphasis on measurable failure modes rather than single aggregate scores.</p>
+            <span class="research-label">TrustMod-SM · NeurIPS 2026 E&amp;D submission</span>
+          </article>
+
+          <article class="research-card">
+            <div class="research-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <h3>Multimodal Medical Reasoning</h3>
+            <p>Vision-language reasoning for medical question answering with causal structure, clinical context, knowledge grounding, and failure-aware reasoning to improve reliability and interpretability in high-stakes settings.</p>
+            <span class="research-label">CRANE · IEEE TMI under review</span>
+          </article>
+
+          <article class="research-card">
+            <div class="research-icon"><i class="fa-solid fa-location-crosshairs"></i></div>
+            <h3>Interactive Multimodal Geolocation</h3>
+            <p>Conversational systems that go beyond predicting coordinates by connecting visual geolocation with dialogue, contextual evidence, and natural-language interaction.</p>
+            <span class="research-label">GAEA · WACV 2026</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="publications">
+      <div class="content">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Publications</p>
+            <h2>Selected work.</h2>
+          </div>
+          <p class="section-intro">Research across multimodal AI, medical NLP, knowledge-grounded reasoning, dialogue, responsible AI, and vision-language systems.</p>
+        </div>
+
+        <div class="featured-pubs">
+          <article class="pub-card">
+            <div class="pub-top"><span class="venue">WACV 2026</span><span class="status">Accepted</span></div>
+            <h3>GAEA: A Geolocation Aware Conversational Assistant</h3>
+            <p class="authors">Ron Campos, Ashmal Vayani, Parth Parag Kulkarni, Rohit Gupta, <strong>Aizan Zafar</strong>, Aritra Dutta, Mubarak Shah</p>
+            <p class="pub-desc">An interactive geolocation assistant that transforms image-based location prediction into contextual, conversational understanding.</p>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2503.16423" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> Paper</a>
+              <a href="https://ucf-crcv.github.io/GAEA/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Project</a>
+              <a href="https://huggingface.co/collections/ucf-crcv/gaea-67d514a61d48eb1708b13a08" target="_blank" rel="noopener"><i class="fa-solid fa-database"></i> Resources</a>
+            </div>
+          </article>
+
+          <article class="pub-card">
+            <div class="pub-top"><span class="venue">COLING 2025</span></div>
+            <h3>MedEx: Enhancing Medical Question-Answering with First-Order Logic-based Reasoning and Knowledge Injection</h3>
+            <p class="authors"><strong>Aizan Zafar</strong>, Kshitij Mishra, Asif Ekbal</p>
+            <p class="pub-desc">Combines first-order logical reasoning with medical knowledge injection to improve answer generation and structured reasoning across medical QA tasks.</p>
+            <div class="pub-links">
+              <a href="https://aclanthology.org/2025.coling-main.649/" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> Paper</a>
+            </div>
+          </article>
+
+          <article class="pub-card">
+            <div class="pub-top"><span class="venue">Findings of EMNLP 2024</span></div>
+            <h3>MedLogic-AQA: Enhancing Medical Question Answering with Abstractive Models Focusing on Logical Structures</h3>
+            <p class="authors"><strong>Aizan Zafar</strong>, Kshitij Mishra, Asif Ekbal</p>
+            <p class="pub-desc">Introduces logical structures into abstractive medical QA to strengthen reasoning over clinical information.</p>
+            <div class="pub-links">
+              <a href="https://aclanthology.org/2024.findings-emnlp.981/" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> Paper</a>
+            </div>
+          </article>
+
+          <article class="pub-card">
+            <div class="pub-top"><span class="venue">Neurocomputing 2024</span></div>
+            <h3>KI-MAG: A Knowledge-Infused Abstractive Question Answering System in the Medical Domain</h3>
+            <p class="authors"><strong>Aizan Zafar</strong>, Sovan Kumar Sahoo, Harsh Bhardawaj, Amitava Das, Asif Ekbal</p>
+            <p class="pub-desc">Knowledge-infused medical QA using knowledge graphs and generation mechanisms for more contextually grounded responses.</p>
+            <div class="pub-links">
+              <a href="https://doi.org/10.1016/j.neucom.2023.127141" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> Paper</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="all-pubs" aria-label="Additional publications">
+          <div class="pub-row">
+            <div class="pub-year">2025</div>
+            <div><h3>Who is Responsible? Data, Models, or Regulations — A Comprehensive Survey on Responsible Generative AI for a Sustainable Future</h3><p>arXiv preprint · Responsible and sustainable generative AI</p></div>
+            <a href="https://arxiv.org/abs/2502.08650" target="_blank" rel="noopener">View <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+          <div class="pub-row">
+            <div class="pub-year">2024</div>
+            <div><h3>KIMedQA: Towards Building Knowledge-Enhanced Medical QA Models</h3><p>Journal of Intelligent Information Systems</p></div>
+            <a href="https://doi.org/10.1007/s10844-024-00844-1" target="_blank" rel="noopener">View <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+          <div class="pub-row">
+            <div class="pub-year">2024</div>
+            <div><h3>Are My Answers Medically Accurate? Exploiting Medical Knowledge Graphs for Medical Question Answering</h3><p>Applied Intelligence</p></div>
+            <a href="https://scholar.google.com/citations?user=iqYHEnsAAAAJ&hl=en" target="_blank" rel="noopener">Scholar <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+          <div class="pub-row">
+            <div class="pub-year">2023</div>
+            <div><h3>End-to-End Sign Language Translation via Multitask Learning</h3><p>IJCNN 2023</p></div>
+            <a href="https://doi.org/10.1109/IJCNN54540.2023.10191295" target="_blank" rel="noopener">View <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+          <div class="pub-row">
+            <div class="pub-year">2023</div>
+            <div><h3>Knowledge Graph Assisted End-to-End Medical Dialog Generation</h3><p>Artificial Intelligence in Medicine</p></div>
+            <a href="https://doi.org/10.1016/j.artmed.2023.102535" target="_blank" rel="noopener">View <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+          <div class="pub-row">
+            <div class="pub-year">2023</div>
+            <div><h3>Knowledge Grounded Medical Dialogue Generation Using Augmented Graphs</h3><p>Scientific Reports</p></div>
+            <a href="https://doi.org/10.1038/s41598-023-29213-8" target="_blank" rel="noopener">View <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+          <div class="pub-row">
+            <div class="pub-year">2022</div>
+            <div><h3>CDialog: A Multi-Turn COVID-19 Conversation Dataset for Entity-Aware Dialog Generation</h3><p>EMNLP 2022</p></div>
+            <a href="https://aclanthology.org/2022.emnlp-main.782/" target="_blank" rel="noopener">View <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+          <div class="pub-row">
+            <div class="pub-year">2019</div>
+            <div><h3>Novel Initialization Strategy for K-Modes Clustering Algorithm</h3><p>BigDML 2019</p></div>
+            <a href="https://link.springer.com/chapter/10.1007/978-981-33-4788-5_8" target="_blank" rel="noopener">View <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="content">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Education</p>
+            <h2>Academic foundation.</h2>
+          </div>
+          <p class="section-intro">Training in computer science, information technology, natural language processing, knowledge-grounded reasoning, and intelligent systems.</p>
+        </div>
+
+        <div class="education-grid">
+          <article class="edu-card">
+            <img class="edu-logo" src="img/iit_patna_logo.png" alt="IIT Patna logo" />
+            <h3>Ph.D. · Computer Science & Engineering</h3>
+            <p><strong>IIT Patna</strong><br />2019 – 2025</p>
+          </article>
+          <article class="edu-card">
+            <img class="edu-logo" src="img/UoH_logo.jpg" alt="University of Hyderabad logo" />
+            <h3>M.Tech. · Information Technology</h3>
+            <p><strong>University of Hyderabad</strong><br />2017 – 2019</p>
+          </article>
+          <article class="edu-card">
+            <img class="edu-logo" src="img/ggu_logo.png" alt="Guru Ghasidas University logo" />
+            <h3>B.Tech. · Information Technology</h3>
+            <p><strong>Guru Ghasidas Central University</strong><br />2012 – 2016</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="contact">
+      <div class="content contact-wrap">
+        <div class="contact-panel">
+          <p class="kicker">Contact</p>
+          <h2>Interested in research collaboration?</h2>
+          <p>I am interested in research opportunities and collaborations around foundation models, multimodal reasoning, trustworthy AI, medical AI, agentic systems, and industrial AI.</p>
+          <a class="button button-primary" href="mailto:aizanzafar@gmail.com"><i class="fa-regular fa-envelope"></i> aizanzafar@gmail.com</a>
+        </div>
+        <aside class="contact-card">
+          <h3>Find me online</h3>
+          <div class="contact-list">
+            <a href="https://scholar.google.com/citations?user=iqYHEnsAAAAJ&hl=en" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Google Scholar</a>
+            <a href="https://github.com/aizanzafar" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/aizanzafar/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+            <a href="https://ucf-crcv.github.io/GAEA/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> GAEA Project</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© <span id="year"></span> Aizan Zafar. Built for research, collaboration, and impact.</span>
+      <a href="#top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-button');
+    const navLinks = document.querySelector('.nav-links');
+    menuButton.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(open));
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+      });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
